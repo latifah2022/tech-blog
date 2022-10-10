@@ -20,7 +20,7 @@ Blog.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        blog: {
+        description: {
             type: DataTypes.TEXT,
             allowNull: false,
         },
