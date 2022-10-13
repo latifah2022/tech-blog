@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
+
+    <div>
+        <header>
+            <h1>Tech Blog</h1>
+            <nav>
+                {{#if logged_in}}
+                <a href="/homepage">Home</a>
+                <a href="/blog">Dashboard</a> 
+                <button class="btn" id="logout">logout</button>
+                {{else}}
+                <a href="/login">login</a>
+                {{/if}}
+            </nav>
+        </header>
+        <main class="container">
+            {{{ body }}}
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
 </body>
 </html>
