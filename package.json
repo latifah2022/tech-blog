@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/latifah2022/tech-blog#readme",
   "dependencies": {
+    "@faker-js/faker": "^7.5.0",
     "bcryptjs": "^2.4.3",
     "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.3",
