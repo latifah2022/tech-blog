@@ -32,7 +32,7 @@ JawsDB (a Heroku add-on for hosting the MySQL database)
 
 ## Usage
 
- ![HEROKU](https://hidden-savannah-43861.herokuapp.com/)
+ [HEROKU](https://hidden-savannah-43861.herokuapp.com/)
 
 Visit the website on Heroku. You can view posts and visit links as a visitor, 
 create your own account, and as an authenticated user you can add your own posts and 
