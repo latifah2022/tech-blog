@@ -5,12 +5,13 @@ const { faker } = require('@faker-js/faker');
 const _BLOG = [];
 for (let i = 0; i < 5; i++) {
     _BLOG.push({
-        tittle: faker.lorem.lines(),
-        userContent: faker.lorem.paragraph(2),
+        title: faker.lorem.lines(),
+        description: faker.lorem.paragraph(2),
+        author: faker.name.firstName(),
         date: faker.date.between()
     });
 }
 
-const seedBook = () => Blog.bulkCreate(blogData);
+const seedBook = () => Blog.bulkCreate(_BLOG);
 
 module.exports = seedBook;

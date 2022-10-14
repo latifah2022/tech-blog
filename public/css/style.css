@@ -1,4 +1,11 @@
 body {
-    color: blue;
+    background-color: 
+    color: black;
+}
+
+header {
+    background: brown;
+    justify-content: space-between;
+    flex: wrap;
 }
 

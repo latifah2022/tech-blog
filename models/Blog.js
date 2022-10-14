@@ -12,11 +12,7 @@ Blog.init(
             autoIncrement: true,
             allowNull: false,
         },
-        tittle: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        author: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -24,15 +20,23 @@ Blog.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        author: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        date:{
+            type: DataTypes.DATE,
+            allowNull: false,  
+            defaultValue: DataTypes.NOW,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
                 key: 'id'
             },
-        }
-
-    },
+        },
+        },
     {
         sequelize,
         timestamps: false,
@@ -40,6 +44,7 @@ Blog.init(
         underscored: true,
         modelName: 'blog',
     }
+
 )
 
 module.exports = Blog;

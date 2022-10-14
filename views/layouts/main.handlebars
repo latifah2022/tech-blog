@@ -14,11 +14,12 @@
             <h1>Tech Blog</h1>
             <nav>
                 {{#if logged_in}}
-                <a href="/homepage">Home</a>
-                <a href="/blog">Dashboard</a> 
+                <a href="/">Home</a>
+                <a href="/profile">Dashboard</a> 
                 <button class="btn" id="logout">logout</button>
                 {{else}}
                 <a href="/login">login</a>
+                <a href="/signup">Signup</a>
                 {{/if}}
             </nav>
         </header>
