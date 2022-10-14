@@ -1,24 +1,16 @@
 <div class="blog">
-    <div class="card-1">
-
-    </div>
-    <div class="card-2">
-
-    </div>
-    <div class="card-3">
-
-    </div>
+    
     <p>
-        <h3>Comments:</h3>
-        {{#each comments as |comment|}}
-        <span class="reviews">{{comment.userReview}}</span>
-        <p> - {{comment.user.name}} on {{format_date comment.date_created}}</p>
+        <h3>New Posts</h3>
+        {{#each content as |content|}}
+        <span class="content">{{content.userContent}}</span>
+        <p> - {{content.user.name}} on {{format_date content.date_created}}</p>
         {{/each}}
   </p>
 
     <form class="form review-form">
     <div class="form-group">
-        <label for="review">Comment</label>
+        <label for="content">Content</label>
         <textarea class="form-input" id="blog-comment" name="comment"></textarea>
     </div>
     <div class="form-group">
@@ -26,7 +18,5 @@
     </div>
   </form>
 
-  <button class="post">New Post</button>
-
 </div>
-<script src="/js/blog.js"></script>
+<script src="js/blog.js"></script>

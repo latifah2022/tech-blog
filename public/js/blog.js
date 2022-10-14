@@ -1,7 +1,10 @@
 async function editFormHandler(event) {
     event.preventDefault();
 
-    const userComment = document.querySelector('#blog-comment').value;
+    const blogId = event.target.id
+     console.log(blogId)
+
+  //  const userComment = document.querySelector('#blog-comment').value;
     
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
@@ -10,9 +13,7 @@ async function editFormHandler(event) {
   
     const response = await fetch(`/api/comment/${id}`, {
       method: 'POST',
-      body: JSON.stringify({
-        userReview,
-      }),
+      body: JSON.stringify(),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -25,4 +26,4 @@ async function editFormHandler(event) {
     }
   }
   
-  document.querySelector('.comment-form').addEventListener('submit', editFormHandler);
+  document.querySelector('.submit-btn').addEventListener('click', editFormHandler);
