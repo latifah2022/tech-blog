@@ -20,10 +20,10 @@ Blog.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        author: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        // author: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        // },
         date:{
             type: DataTypes.DATE,
             allowNull: false,  

@@ -1,10 +1,12 @@
 async function editFormHandler(event) {
     event.preventDefault();
 
-    const blogId = event.target.id
+    const blogId = event.target.getAttribute("data-id")
      console.log(blogId)
 
-   const userComment = document.querySelector('#blog-comment').value;
+   const userComment = document.querySelector(`#blog-comment`).value;
+   console.log(userComment)
+
     
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
@@ -21,10 +23,30 @@ async function editFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace(`/blog/${id}`);
+       //document.location.replace(`/blog/${id}`);
     } else {
       alert("can't add comment");
     }
   }
+
+  const delButtonHandler = async (event) => {
+    console.log('deleting comement')
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
   
-  document.querySelector('.submit-btn').addEventListener('click', editFormHandler);
+      const response = await fetch(`/api/comment/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.replace('/blog');
+      } else {
+        alert('Failed to delete blog');
+      }
+    }
+  };
+
+  document.querySelector('.btn-2').addEventListener('click', delButtonHandler);
+
+  
+  document.querySelector('.btn-1').addEventListener('click', editFormHandler);

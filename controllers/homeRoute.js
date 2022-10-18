@@ -42,6 +42,35 @@ router.get('/blog/:id', async (req, res) => {
     }
 });
 
+router.get("/comment/:id", withAuth, async (req, res) => {
+  try {
+    const commentData = await this.post.findByPk(req.params.id, {
+      include: [
+        {
+        model: User,
+        attributes: ["username"],
+        },
+        {
+          model: Comment, 
+          attributes: ["comment", "date", "user_id", "blog_id"],
+          include: [{model: User, attributes: ["username"]}],
+        }
+      ]
+    })
+    const comment = commentData.get({plain: true});
+    if (comment) {
+      res.render("comment", {
+        ...comment,
+        logged_in: req.session.logged_in
+      });
+    } else {
+      res.status(400).json(" Blog not found");
+    }
+  }  catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 router.get('/profile', withAuth, async (req, res) => {
     try {
       

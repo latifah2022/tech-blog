@@ -12,17 +12,17 @@
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: #132B21;
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: #439775;
   }
   
   button {
-    background-color: #225ca3;
+    background-color: #1F4736;
     border: 0;
     padding: 1%;
     color: white;
@@ -33,7 +33,7 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: #449C77;
   }
   
   .post-list {
@@ -81,7 +81,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
-    background-color: #333;
+    background-color: #71C1A0;
   }
   
   header h1 {
@@ -109,7 +109,7 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: #3F612D;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -118,7 +118,7 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: #9CE37D;
   }
   
   .delete-post-btn {
@@ -170,7 +170,7 @@
   }
   
   .comment:nth-child(odd) {
-    background-color: #f0f5ff;
+    background-color: #3F612D;
   }
   
   .comment .meta {
