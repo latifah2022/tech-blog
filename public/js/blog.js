@@ -1,3 +1,4 @@
+console.log("blog is working")
 async function editFormHandler(event) {
     event.preventDefault();
 
@@ -13,7 +14,7 @@ async function editFormHandler(event) {
     ];
   
   
-    const response = await fetch(`/api/comment/${id}`, {
+    const response = await fetch(`/api/blog${id}`, {
       method: 'POST',
       body: JSON.stringify(),
       userComment,
@@ -23,7 +24,7 @@ async function editFormHandler(event) {
     });
   
     if (response.ok) {
-       //document.location.replace(`/blog/${id}`);
+     document.location.replace(`/blog/${id}`);
     } else {
       alert("can't add comment");
     }
@@ -46,7 +47,7 @@ async function editFormHandler(event) {
     }
   };
 
-  document.querySelector('.btn-2').addEventListener('click', delButtonHandler);
+  document.querySelector('.delete-btn').addEventListener('click', delButtonHandler);
 
   
-  document.querySelector('.btn-1').addEventListener('click', editFormHandler);
+  document.querySelector('.add-btn').addEventListener('click', editFormHandler);

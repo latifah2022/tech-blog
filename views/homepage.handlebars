@@ -13,10 +13,11 @@
     </div>
     <footer>
         <textarea class="form-input" id="blog-comment{{blog.id}}" name="comment"></textarea>
-        <button data-id={{blog.id}}  class="submit-btn btn btn-primary">Add comment</button>
-        <button data-id={{blog.id}}  class="submit-btn btn btn-primary">Delete Comment</button>
+        <button data-id={{blog.id}}  class="add-btn btn btn-primary">Add comment</button>
+        <button data-id={{blog.id}}  class="delete-btn btn btn-primary">Delete Comment</button>
     </footer>
     </div>
 
 {{/each}}
+<script src="js/blog.js"></script>
 

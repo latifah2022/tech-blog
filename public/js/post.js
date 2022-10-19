@@ -32,13 +32,13 @@ async function editFormHandler(event) {
     ];
 
     const title = document.querySelector('input[name="title"]').value;
-    const content = document.querySelector('textarea[name="content"]').value;
+    const description = document.querySelector('textarea[name="description"]').value;
 
     const response = await fetch(`/api/blog/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
             title,
-            content
+            description,
         }),
         headers: {
             'Content-Type': 'application/json'
